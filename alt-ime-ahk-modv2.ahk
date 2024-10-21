@@ -1,12 +1,12 @@
-; 左右 Alt キーの空打ちで IME を ON/OFF する AutoHotkey スクリプトのような何か
+; 左右 Alt キーの空打ちで IME を ON/OFF する AutoHotkey スクリプト
 ;
 ; 左 Alt キーの空打ちで IME OFF
 ; 右 Alt キーの空打ちで IME ON
 ; Alt キーを押している間に他のキーを打つと通常の Alt キーとして動作
-; CapsLock 0.75秒 長押しで ON (OFF は変更なし)
 ;
-; Author:              nekocodeX   https://github.com/nekocodeX/alt-ime-ahk-mod
+; Author:              ryo
 ; Original author:     karakaram   http://www.karakaram.com/alt-ime-on-off
+;                      SorrowBlue  https://github.com/SorrowBlue/alt-ime-ahk-mod-v2
 
 #Include "IMEv2.ahk"
 
@@ -176,23 +176,13 @@ RAlt up::
 }
 #HotIf
 
-; CapsLock 0.75秒 長押しで ON (OFF は変更なし)
 ; CapsLock 無効化
 CapsLock::return
-;{
-;    ErrorLevel := !KeyWait("CapsLock", "T0.75")
-;    If (ErrorLevel && !GetKeyState("CapsLock", "T")) {
-;        SetCapsLockState("On")
-;    } else if (!ErrorLevel && GetKeyState("CapsLock", "T")) {
-;        SetCapsLockState("Off")
-;    }
-;    ErrorLevel := !KeyWait("CapsLock")
-;    Return
-;}aaa
 
-; Win + CapsLock を無視
-+vkf0::return
-;#CapsLock::
-;{
-;    Return
-;}
+#f::
+{
+A_Clipboard := ""
+Send "^c"
+ClipWait(1)
+Run "https://www.google.co.jp/search?q=" A_Clipboard
+}
