@@ -22,7 +22,8 @@ Releases から alt-ime-ahk-v2f.zip をダウンロード後、好きな場所�
 
 アンインストールは alt-ime-ahk-v2f.exe を削除するだけで OK です。
 
-## ブログの紹介ページ
+## 参考
 
 [Altの空打ちで日本語入力(IME)を切り替えるツールを作った](http://www.karakaram.com/alt-ime-on-off/)
+[Autohotkey v2.0のIME制御用 関数群 IMEv2.ahk](https://qiita.com/kenichiro_ayaki/items/d55005df2787da725c6f)
 
