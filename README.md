@@ -1,4 +1,4 @@
-# alt-ime-ahk
+# alt-ime-ahk-v2f
 
 ## 概要
 
@@ -20,7 +20,7 @@ Releases から alt-ime-ahk-v2f.zip をダウンロード後、好きな場所�
 
 終了する場合はタスクトレイのアイコンを右クリックし、「終了」をクリックしてください。
 
-アンインストールは alt-ime-ahk.exe を削除するだけで OK です。
+アンインストールは alt-ime-ahk-v2f.exe を削除するだけで OK です。
 
 ## ブログの紹介ページ
 
