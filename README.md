@@ -38,6 +38,6 @@ Releases から alt-ime-ahk-v2f.zip をダウンロード後、好きな場所�
 
 Copyright (C) 2025-2026 ryo
 
-本スクリプトは AutoHotkey（GPLv2）を利用しており、Ahk2Exe でコンパイルした exe には AutoHotkey インタプリタが含まれます。そのため exe のみを配布する場合でも、対応するソースコードは本リポジトリ（https://github.com/ryobeam/alt-ime-ahk-v2f）で公開しています。
+本スクリプトは AutoHotkey（GPLv2）を利用しており、Ahk2Exe でコンパイルした exe には AutoHotkey インタプリタが含まれます。そのため exe のみを配布する場合でも、対応するソースコードは本リポジトリ(https://github.com/ryobeam/alt-ime-ahk-v2f)で公開しています。
 
 なお、本スクリプトは karakaram 氏の alt-ime-ahk および IMEv2.ahk を基にしています（上記「参考」を参照）。
