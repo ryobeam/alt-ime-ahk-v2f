@@ -4,6 +4,7 @@
 ; 右 Alt キーの空打ちで IME ON
 ; Alt キーを押している間に他のキーを打つと通常の Alt キーとして動作
 ;
+; Version:             1.0.1
 ; Author:              ryo
 ; Original author:     karakaram   http://www.karakaram.com/alt-ime-on-off
 ;                      SorrowBlue  https://github.com/SorrowBlue/alt-ime-ahk-mod-v2
