@@ -127,7 +127,7 @@ GitHubRepoReadme(A_ThisMenuItem, A_ThisMenuItemPos, MyMenu)
 *~/::
 *~?::
 *~Esc::
-*~Tab::
+; *~Tab::
 *~Space::
 *~Left::
 *~Right::
@@ -144,40 +144,43 @@ GitHubRepoReadme(A_ThisMenuItem, A_ThisMenuItemPos, MyMenu)
     Return
 }
 
-; 上部メニューがアクティブになるのを抑制 / Xbox Game Bar 起動用仮想キーコードとのバッティング回避 (vk07 -> vkFF)
-*~LAlt::
-{
-    Send("{Blind}{vkFF}")
-}
-*~RAlt::
-{
-    Send("{Blind}{vkFF}")
-}
-
 ; 左 Alt 空打ちで IME を OFF
+; Chrome のメニューフォーカス対策: AHK が Alt を所有し、単独 Alt を Chrome に渡さない
 #HotIf !WinActive("ahk_exe mstsc.exe")
-LAlt up::
+*LAlt::
 {
-    if (A_PriorHotkey == "*~LAlt") {
+    SetKeyDelay(-1)
+    Send("{Blind}{LAlt DownR}{F13}")
+    KeyWait("LAlt")
+}
+~*LAlt up::
+{
+    SetKeyDelay(-1)
+    Send("{Blind}{LAlt Up}")
+    if (A_PriorHotkey = "*LAlt") {
         IME_SET(0)
     }
-    Return
 }
 #HotIf
 
 ; 右 Alt 空打ちで IME を ON
+; Chrome のメニューフォーカス対策: AHK が Alt を所有し、単独 Alt を Chrome に渡さない
 #HotIf !WinActive("ahk_exe mstsc.exe")
-RAlt up::
+*RAlt::
 {
-    if (A_PriorHotkey == "*~RAlt") {
+    SetKeyDelay(-1)
+    Send("{Blind}{RAlt DownR}{F13}")
+    KeyWait("RAlt")
+}
+~*RAlt up::
+{
+    SetKeyDelay(-1)
+    Send("{Blind}{RAlt Up}")
+    if (A_PriorHotkey = "*RAlt") {
         IME_SET(1)
     }
-    Return
 }
 #HotIf
-
-; CapsLock 無効化
-CapsLock::return
 
 #f::
 {
@@ -186,3 +189,15 @@ Send "^c"
 ClipWait(1)
 Run "https://www.google.co.jp/search?q=" A_Clipboard
 }
+
+
+CapsLock::~
+;Del::Home
+PgUp::PgDn
++PgUp::PgUp
+PgDn::Home
+;End::Del
+;Tab::Send("^m")
+
+
+
