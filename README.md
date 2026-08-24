@@ -10,6 +10,9 @@
 * CapsLock 無効化
 * 文字列を選択後 Win + F で検索
 
+## 修正
+* Chrome や VS Code など Chromium 系アプリで、Alt 単押しで上部メニュー（右上「︙」など）にフォーカスが移るのを抑制
+
 ## 動作環境
 
 * Windows 10 / 11
